@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Post & Logistics - Tailwind Prototype</title>
+  <!-- Tailwind CDN for quick prototype -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- NAV -->
+  <header class="bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-blue-600 rounded-md flex items-center justify-center text-white font-bold">PL</div>
+        <div>
+          <h1 class="text-lg font-semibold">Post & Logistics</h1>
+          <p class="text-xs text-gray-500">Reliable Shipping. Seamless Solutions.</p>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#" class="hover:text-blue-600">Home</a>
+        <div class="group relative">
+          <button class="hover:text-blue-600">Our Services</button>
+          <div class="absolute left-0 mt-2 bg-white rounded shadow-md py-2 w-40 opacity-0 group-hover:opacity-100 transition">
+            <a class="block py-2" href="./air-freight.html">Air Freight</a>
+      <a class="block py-2" href="./road-freight.html">Road Freight</a>
+      <a class="block py-2" href="./sea-freight.html">Sea Freight</a>
+          </div>
+        </div>
+        <a href="#" class="hover:text-blue-600">About Us</a>
+        <a href="https://postlogisticstracking.onrender.com/" class="hover:text-blue-600">Track</a>
+        <a href="#" class="hover:text-blue-600">Contact Us</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#" class="hidden md:inline-block px-4 py-2 bg-blue-600 text-white rounded-md text-sm">Contact Us</a>
+        <button class="md:hidden p-2" id="mobileBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden px-6 pb-4 hidden">
+      <a class="block py-2" href="#">Home</a>
+      <a class="block py-2" href="/air-freight.html">Air Freight</a>
+      <a class="block py-2" href="/road-freight.html">Road Freight</a>
+      <a class="block py-2" href="/sea-freight.html">Sea Freight</a>
+      <a class="block py-2" href="#">About Us</a>
+      <a class="block py-2" href="https://postlogisticstracking.onrender.com/">Track</a>
+      <a class="block py-2" href="#">Contact</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main class="max-w-7xl mx-auto px-6 py-12">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Efficient Deliveries Every Time</h2>
+        <p class="text-gray-600 mb-6">Looking for swift and dependable delivery? Our courier services ensure your packages arrive safely and on time. Trust us for hassle-free, secure deliveries.</p>
+        <div class="flex gap-3">
+          <a href="#" class="px-5 py-3 bg-blue-600 text-white rounded-md shadow-sm">Contact Us</a>
+          <a href="#" class="px-5 py-3 border border-gray-300 rounded-md">Discover More</a>
+        </div>
+
+        <div class="mt-8 grid grid-cols-2 gap-3">
+          <div class="bg-white p-4 rounded shadow-sm">
+            <h4 class="font-semibold">Fast Delivery</h4>
+            <p class="text-sm text-gray-500">Same-day and urgent deliveries available.</p>
+          </div>
+          <div class="bg-white p-4 rounded shadow-sm">
+            <h4 class="font-semibold">Real Time Tracking</h4>
+            <p class="text-sm text-gray-500">Monitor your shipment from pick-up to delivery.</p>
+          </div>
+          <div class="bg-white p-4 rounded shadow-sm">
+            <h4 class="font-semibold">Timed Deliveries</h4>
+            <p class="text-sm text-gray-500">Schedule deliveries that match your business needs.</p>
+          </div>
+          <div class="bg-white p-4 rounded shadow-sm">
+            <h4 class="font-semibold">Flexible Pricing</h4>
+            <p class="text-sm text-gray-500">Transparent pricing with no hidden fees.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-6">
+        <!-- Tracker card -->
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="font-semibold mb-3">Search or Track Packages</h3>
+          <label class="text-xs text-gray-500">Enter the Consignment No.</label>
+          <div class="mt-3 flex gap-3">
+            <input type="text" placeholder="Ex: 12345" class="flex-1 border border-gray-200 rounded px-4 py-2" />
+            <a href="https://postlogisticstracking.onrender.com/"><button class="px-4 py-2 bg-blue-600 text-white rounded">Track</button></a>
+          </div>
+        </div>
+
+        <!-- Request a quote -->
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="font-semibold mb-4">Request A Quote</h3>
+          <form class="space-y-3">
+            <div class="grid grid-cols-2 gap-3">
+              <input class="border border-gray-200 rounded px-3 py-2" placeholder="First name" />
+              <input class="border border-gray-200 rounded px-3 py-2" placeholder="Last name" />
+            </div>
+            <input class="w-full border border-gray-200 rounded px-3 py-2" placeholder="Phone number" />
+            <input class="w-full border border-gray-200 rounded px-3 py-2" placeholder="Email" />
+            <input class="w-full border border-gray-200 rounded px-3 py-2" placeholder="Pickup location (Address, City, State)" />
+            <input class="w-full border border-gray-200 rounded px-3 py-2" placeholder="Delivery location (Address, City, State)" />
+            <textarea class="w-full border border-gray-200 rounded px-3 py-2" rows="3" placeholder="Description of items being shipped"></textarea>
+
+            <div class="grid grid-cols-3 gap-2">
+              <select class="border border-gray-200 rounded px-2 py-2">
+                <option>Shipping Method</option>
+                <option>Road Freight</option>
+                <option>Air Freight</option>
+                <option>Sea Freight</option>
+              </select>
+              <select class="border border-gray-200 rounded px-2 py-2">
+                <option>Urgency</option>
+                <option>7 Days</option>
+                <option>14 Days</option>
+              </select>
+              <input class="border border-gray-200 rounded px-2 py-2" placeholder="Quantity" />
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div class="text-sm text-gray-500">Value of package (for insurance)</div>
+              <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded">Submit</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Stats -->
+        <div class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg p-6 shadow">
+          <div class="grid grid-cols-3 gap-4 text-center">
+            <div>
+              <div class="text-2xl font-bold">3000+</div>
+              <div class="text-sm">Safe Cargo</div>
+            </div>
+            <div>
+              <div class="text-2xl font-bold">500+</div>
+              <div class="text-sm">Ware Houses</div>
+            </div>
+            <div>
+              <div class="text-2xl font-bold">100+</div>
+              <div class="text-sm">Operating Countries</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Services -->
+    <section class="mt-12">
+      <h3 class="text-2xl font-semibold mb-6">Delivering the Best Global Logistics Solutions</h3>
+      <p class="text-gray-600 mb-6">Fast, secure, and reliable courier services locally and globally.</p>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <article class="bg-white p-6 rounded shadow-sm">
+          <h4 class="font-semibold mb-2">Air Freight</h4>
+          <p class="text-sm text-gray-500 mb-4">Fast air shipping with competitive rates and real-time tracking.</p>
+          <a href="#" class="text-blue-600 text-sm">Learn more</a>
+        </article>
+
+        <article class="bg-white p-6 rounded shadow-sm">
+          <h4 class="font-semibold mb-2">Sea Freight</h4>
+          <p class="text-sm text-gray-500 mb-4">Reliable sea cargo with global routes and safe handling.</p>
+          <a href="#" class="text-blue-600 text-sm">Learn more</a>
+        </article>
+
+        <article class="bg-white p-6 rounded shadow-sm">
+          <h4 class="font-semibold mb-2">Road Freight</h4>
+          <p class="text-sm text-gray-500 mb-4">Efficient regional transport with door to door options.</p>
+          <a href="#" class="text-blue-600 text-sm">Learn more</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t">
+    <div class="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-6">
+      <div>
+        <h5 class="font-semibold mb-3">Contact</h5>
+        <p class="text-sm text-gray-600">6 Crown Street, Steinberg WC2B 8FE</p>
+        <p class="text-sm text-gray-600">United States</p>
+        <p class="text-sm text-gray-600">Tel: +1 (562) 5136-268</p>
+        <p class="text-sm text-gray-600">Email: info@postandlogisticsgroups.com</p>
+      </div>
+
+      <div>
+        <h5 class="font-semibold mb-3">Quick Links</h5>
+        <ul class="text-sm text-gray-600 space-y-2">
+          <li><a href="#" class="hover:text-blue-600">Home</a></li>
+          <li><a href="#" class="hover:text-blue-600">Services</a></li>
+          <li><a href="#" class="hover:text-blue-600">Track</a></li>
+          <li><a href="#" class="hover:text-blue-600">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="font-semibold mb-3">Working Hours</h5>
+        <p class="text-sm text-gray-600">Mon - Fri: 09:00 am - 09:00 pm</p>
+        <p class="text-sm text-gray-600">Sat - Sun: Closed</p>
+      </div>
+    </div>
+
+    <div class="bg-gray-50 border-t">
+      <div class="max-w-7xl mx-auto px-6 py-4 text-sm text-gray-500">© <span id="year"></span> Post & Logistics Groups. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    // small UI interactions
+    document.getElementById('mobileBtn').addEventListener('click', function () {
+      const m = document.getElementById('mobileMenu');
+      m.classList.toggle('hidden');
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
