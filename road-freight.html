@@ -29,6 +29,22 @@
         <a href="contact.html" class="hover:text-blue-600">Contact</a>
       </nav>
     </div>
+
+    <button class="md:hidden p-2" id="mobileBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+          </svg>
+        </button>
+
+    <div id="mobileMenu" class="md:hidden px-6 pb-4 hidden">
+      <a class="block py-2" href="./index.html">Home</a>
+      <a class="block py-2" href="./air-freight.html">Air Freight</a>
+      <a class="block py-2" href="./road-freight.html">Road Freight</a>
+      <a class="block py-2" href="./sea-freight.html">Sea Freight</a>
+      <a class="block py-2" href="./about.html">About Us</a>
+      <a class="block py-2" href="https://postlogisticstracking.onrender.com/">Track</a>
+      <a class="block py-2" href="#">Contact</a>
+    </div>
   </header>
 
   <!-- HERO -->
@@ -75,6 +91,11 @@
   </footer>
 
   <script>
+      // small UI interactions
+    document.getElementById('mobileBtn').addEventListener('click', function () {
+      const m = document.getElementById('mobileMenu');
+      m.classList.toggle('hidden');
+    });
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
